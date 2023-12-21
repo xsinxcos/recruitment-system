@@ -1,0 +1,37 @@
+server:
+  port: 8090
+spring:
+  main:
+    allow-circular-references: true
+  datasource:
+    url:
+    username:
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 5MB
+  redis:
+    database: 0
+    host:
+    port: 6379
+    password: 
+mybatis-plus:
+  configuration:
+    # 日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: delFlag
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      id-type: auto
+# 注意不是在spring下！！！
+wechat:
+  mpAppId:
+  mpAppSecret:
+oss:
+  accessKey:
+  secretKey:
+  bucket :
